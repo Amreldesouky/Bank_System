@@ -84,9 +84,9 @@ void Admin::editEmployee(int id, string name, string password, double salary)
 }
 
 // display the list of employees
-void listClient()
+void listEmployee()
 {
-    cout << "List of clients: " << endl;
+    cout << "List of Employees: " << endl;
     for (int i = 0; i < employees.size(); i++)
     {
         cout << "Name: " << employees[i].getName() << ", ID: " << employees[i].getId() << ", Salary: " << employees[i].getSalary() << endl;
