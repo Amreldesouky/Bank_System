@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Person.h"
 #pragma once
 
@@ -16,6 +17,20 @@ public:
     void setSalary(double salary);
     // getters
     double getSalary();
+
+    // 
+    void addEmployee(Employee& employee);
+
+    //
+    Employee* searchEmployee(int id);
+
+    //
+    void editEmployee(int id, string name, string password, double salary);
+
+    //
+    void listEmployee();
+
     // display employee info
     void display();
+
 };
