@@ -21,5 +21,4 @@ public:
     void editEmployee(int id, string name, string password, double salary);
     void listEmployee();
     void display();
-  
 };

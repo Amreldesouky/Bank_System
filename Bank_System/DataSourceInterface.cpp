@@ -27,20 +27,20 @@ class FileManager : public DataSourceInterface
 public:
     void addClient(Client client) {
         ofstream outfile("clients.txt", ios::app);
-        outfile << client.toString() << endl;
+        client.display();
         outfile.close();
     }
 
     void addEmployee(Employee employee)
     {
         ofstream outfile("employees.txt", ios::app);
-        outfile << employee.toString() << endl;
+        employee.display();
         outfile.close();
     }
 
     void addAdmin(Admin admin) {
         ofstream outfile("admins.txt", ios::app);
-        outfile << admin.toString() << endl;
+        admin.display();
         outfile.close();
     }
 

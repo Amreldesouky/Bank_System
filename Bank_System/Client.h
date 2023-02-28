@@ -40,8 +40,6 @@ public:
     Client* searchClient(int id);
     // display the list of clients
     void listClient();
-    // display the list of clients
-    void listClient();
     // edit clients
     void editClient(int id, string name, string password, double balance);
 

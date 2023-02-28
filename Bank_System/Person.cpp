@@ -1,6 +1,5 @@
 #include "Person.h"
 
-
 // constructor
 Person::Person(string name , int id , string password) {
     setName(name);
