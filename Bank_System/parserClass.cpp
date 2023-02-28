@@ -2,48 +2,10 @@
 #include <string>
 #include <vector>
 #include <fstream>
-//#include "Person.h"
-//#include "Client.h"
-//#include "Employee.h"
-//#include "Admin.h"
-//#include "Validation.h"
+#include "parserClass.h"
 using namespace std;
 
-class Client
-        {
-public:
-    int id;
-    string name;
-    string password;
-    double balance;
-};
-
-class Employee
-        {
-public:
-    int id;
-    string name;
-    string password;
-    double salary;
-};
-
-class Admin
-        {
-public:
-    int id;
-    string name;
-    string password;
-};
-
-class Parser
-        {
-// protected:
-//    int id;
-//    string name;
-//    string password;
-//    double balance;
-//    double salary;
-
+class Parser {
 public:
     static vector<string> split(string line)
     {
@@ -69,7 +31,6 @@ public:
         client.balance = stod(fields[3]);
         return client;
     }
-
 
     static Employee parseToEmployee(string line)
     {
@@ -98,5 +59,5 @@ int main()
 {
     string line = "9,Ibrahim,123123Ii,2600";
     Client client = Parser::parseToClient(line);
-    cout << "Client : id=" << client.id << ", name=" << client.name << ", balance=" << client.balance << endl;
+    cout << "Client : id=" << client.getId() << ", name=" << client.getName() << ", balance=" << client.getBalance() << endl;
 }
