@@ -9,33 +9,9 @@
 #pragma once
 using namespace std;
 
-//class Client
-//{
-//public:
-//    int id;
-//    string name;
-//    string password;
-//    double balance;
-//};
-//
-//class Employee
-//{
-//public:
-//    int id;
-//    string name;
-//    string password;
-//    double salary;
-//};
-//
-//class Admin
-//{
-//public:
-//    int id;
-//    string name;
-//    string password;
-//};
 class Parser {
 public:
+    Employee employee;
     static vector<string> split(string line);
     static Client parseToClient(string line);
     static Employee parseToEmployee(string line);

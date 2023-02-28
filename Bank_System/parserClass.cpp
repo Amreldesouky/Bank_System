@@ -2,11 +2,14 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include "parserClass.h"
+#include "Person.h"
+#include "Client.h"
+#include "Employee.h"
+#include "Admin.h"
 using namespace std;
 
-class Parser {
-public:
+//class Parser {
+//public:
     static vector<string> split(string line)
     {
         vector<string> result;
@@ -25,21 +28,21 @@ public:
     {
         vector<string> fields = split(line);
         Client client;
-        client.id = stoi(fields[0]);
-        client.name = fields[1];
-        client.password = fields[2];
-        client.balance = stod(fields[3]);
+        client.setId(stoi(fields[0])) ;
+        client.setName(fields[1]);// = fields[1];
+        client.setPassword(fields[2]);
+        client.setBalance(stod(fields[3]));
         return client;
     }
 
     static Employee parseToEmployee(string line)
     {
         vector<string> fields = split(line);
-        static Employee employee;
-        employee.id = stoi(fields[0]);
-        employee.name = fields[1];
-        employee.password = fields[2];
-        employee.salary = stod(fields[3]);
+        Employee employee;
+        employee.setId(stoi(fields[0]));
+        employee.setName(fields[1]);
+        employee.setPassword(fields[2]);
+        employee.setSalary(stod(fields[3]));
         return employee;
     }
 
@@ -47,17 +50,17 @@ public:
     {
         vector<string> fields = split(line);
         Admin admin;
-        admin.id = stoi(fields[0]);
-        admin.name = fields[1];
-        admin.password = fields[2];
+        admin.setId(stoi(fields[0]));
+        admin.setName(fields[1]);
+        admin.setPassword(fields[2]);
         return admin;
     }
-};
+//};
 
 // Test
 int main()
 {
     string line = "9,Ibrahim,123123Ii,2600";
-    Client client = Parser::parseToClient(line);
+    Client client = parseToClient(line);
     cout << "Client : id=" << client.getId() << ", name=" << client.getName() << ", balance=" << client.getBalance() << endl;
 }
